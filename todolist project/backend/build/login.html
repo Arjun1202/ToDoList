@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Login Page</title>
+    </head>
+    <link rel="stylesheet" href="rt.css">
+    <body>
+    <div id="container">
+    <form id="signin">
+        <div id="titlelogin">Sign in to acess your To-Do List</div>
+        <div class="textboxlbl">
+        <span class="lblinput">Username</span>
+       <input type="text" placeholder="Username" name="userName" id="username"/>
+        </div class="textboxlbl">
+        <div class="textboxlbl">
+        <span class="lblinput">Password</span>
+        <input type="password" placeholder="Password" name="password" id="password"/>
+        </div class="textboxlbl">
+        <div class="buttonlist">
+        <input type="button" value="Home" id="homebutton" class="clickbtn"/>
+        <input type="button" value="Register" id="nologin" class="clickbtn"/>
+        <input type="submit" value="Login" id="loginbutton" class="clickbtn"/>
+        </div>
+        <div id="msg"></div> 
+    </form>
+    </div>
+    </body>
+    <script>
+    let ob=document.getElementById("signin");
+    let name=document.getElementById("username");
+    let key=document.getElementById("password");
+    ob.addEventListener('submit',async (e)=>
+    {
+        e.preventDefault();
+        const a=await fetch('http://localhost:3000/login',{
+            method:"POST",
+            headers:
+            {
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                userName:name.value,
+                password:key.value
+            })
+        }).then(res=>res.json())
+        console.log(a);
+        if(a.test==false)
+        {   
+            window.location.replace("http://localhost:3000/todolist");
+        }
+        else
+        {
+            let rs=document.getElementById("msg");
+            key.value="";
+            rs.innerText=a.message;
+        }
+    })
+    let rg=document.getElementById('nologin');
+    rg.addEventListener('click',()=>
+    {
+        window.location.replace("http://localhost:3000/register");
+    })
+    let rg1=document.getElementById('homebutton');
+    rg1.addEventListener('click',()=>
+    {
+        window.location.replace("http://localhost:3000/start");
+    })
+    </script>
+</html>

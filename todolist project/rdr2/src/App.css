@@ -1,0 +1,165 @@
+#main
+{
+    margin-left:2rem;
+    margin-top:40px;
+    height:60px;
+    width:600px;
+    border:3px solid black;
+    font-size:1.6em;
+    margin-bottom:20px;
+}
+
+body
+{
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+}
+
+#todoinput
+{
+    border:3px solid black;
+    margin-right:20px;
+    margin-top:20px;
+}
+
+#sb,#tl,#dl,.upd,.upd1
+{
+    background-image: linear-gradient(#42A1EC, #0070C9);
+    border: 1px solid #0077CC;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family:sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.022em;
+    line-height: 1.47059;
+    /* min-width: 100px; */
+    overflow: visible;
+    padding: 4px 15px;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration:none;
+    align-self:center;
+    margin-top:25px;
+    width:100px;
+    height:35px;
+    padding-top:2px;
+}
+#dl
+{
+    width:100px;
+    height:35px;
+    margin-left:1.5rem;
+}
+
+#tl,.upd
+{   
+    width:100px;
+    height:35px;
+}
+.upd{
+    margin-left:1.5rem;
+}
+
+.todo
+{
+    margin-left:2rem;
+    /* background-color:white; */
+    min-width:600px;
+    padding-left:20px;
+    padding-bottom:20px;
+    padding-right:10px;
+    box-sizing:border-box;
+    /* border:3px solid black; */
+    box-shadow:20px 20px 50px rgba(0,0,0,0.1);
+    background:rgba(255,255,255,0.1);
+    margin-bottom:10px;
+}
+
+.item
+{   
+    margin-top:1.8rem;
+    margin-bottom:1.2rem;
+    font-size:2rem;
+}
+
+.updatebox
+{
+    height:40px;
+    width:200px;
+    margin-right:10px;
+}
+
+.upd1
+{
+    width:100px;
+    height:30px;
+    position:relative;
+    bottom:4px;
+}
+
+#containerfortodo
+{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    height:20%;
+    justify-content:flex-start;
+    gap:20px;
+}
+
+button
+{
+    cursor:pointer;
+}
+
+#outerbox
+{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+    height:100%;
+    width:100%;
+    gap:10px;
+}
+
+#todotitle
+{
+    font-weight:bolder;
+    align-self:center;
+    font-size:2em;
+    margin-top:5px;
+}
+
+#deletetoggle,#logout
+{
+    align-self:flex-end;
+    height:50px;
+    width:150px;
+    font-weight:bolder;
+    font-size:1.2em;
+    margin-bottom:10px;
+}
+
+#usernamevalue
+{
+    align-self:flex-end;
+    font-size:1.2em;
+    font-weight:bolder;
+}
+
+body
+{
+    font-family:sans-serif;
+}
+
+.logoutcontainer
+{
+display:flex;
+flex-direction:row;
+justify-content:flex-end;
+width:100%;
+gap:10px;
+}

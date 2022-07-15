@@ -1,0 +1,160 @@
+#signin,#reg
+{
+    display:flex;
+    flex-direction:column;
+    min-width:400px;
+    min-height:200px;
+    align-items:flex-start;
+    justify-content:center;
+    gap:20px;
+}
+
+.listforbuttons
+{
+    display:flex;
+    justify-content:flex-end;
+    width:100%;
+    gap:10px;
+}
+
+#container
+{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    height:100%;
+    align-items:center;
+    justify-content:center;   
+}
+
+#registerbutton
+{
+    align-self:flex-end;
+}
+
+#loginbutton
+{
+    margin-right:5px;
+}
+
+#msg,#msg1
+{
+    margin-left:5%;
+    align-self:flex-start;
+    font-weight:bolder;
+    font-size:1.2em;
+}
+
+#startcontainer
+{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    height:100%;
+    width:100%;
+}
+
+.links
+{
+    background-color:lightblue;
+    height:50px;
+    width:100px;
+    text-align:center;
+    text-decoration:none;
+    padding-top:20px;
+    color:black;
+    border:3px solid black;
+}
+
+.buttonlist
+{
+    display:flex;
+    justify-content:flex-end;
+    width:100%;
+    gap:10px;
+}
+
+#titlehome
+{
+    align-self:center;
+    font-size:2rem;
+    font-weight:bolder;
+}
+
+body
+{
+    font-family:sans-serif;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+}
+
+.clickbtn
+{
+  background-image: linear-gradient(#42A1EC, #0070C9);
+  border: 1px solid #0077CC;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family:sans-serif;
+  font-size: 17px;
+  letter-spacing: -0.022em;
+  line-height: 1.47059;
+  min-width: 30px;
+  overflow: visible;
+  padding: 4px 15px;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration:none;
+}
+
+#username,#password,#confirmpassword
+{
+    border:2px solid #4f546c;
+    font-family:sans-serif;
+    border-radius:0.3rem;
+    box-sizing:border-box;
+    height:50px;
+    width:400px;
+    font-size:1.3rem;
+}
+
+.lblinput
+{
+    font-size:1.3rem;
+    margin-bottom:5px;
+}
+
+.textboxlbl
+{
+    display:flex;
+    flex-direction:column;
+}
+
+#titlereg,#titlelogin
+{
+    font-size:1.5rem;
+    margin-bottom:20px;
+    align-self:flex-start;
+}
+
+.startpage
+{
+    width:500px;
+    margin-bottom:50px;
+}
+
+#startnav
+{
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+    width:100vw;
+    justify-content:center;
+    align-items:center;
+    font-size:1.5rem;
+}
+
+.lblstart
+{
+    align-self:center
+}

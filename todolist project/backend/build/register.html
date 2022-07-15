@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <link rel="stylesheet" href="rt.css">
+    <body>
+    <div id="container">
+    <form id="reg">
+        <div id="titlereg">Join to create your own To-Do List</div>
+       <div class="textboxlbl">
+       <span class="lblinput">Username </span>
+       <input type="text" placeholder="Username" name="userName" id="username"/>
+       </div>
+        <div class="textboxlbl">
+        <span class="lblinput">Password </span>
+        <input type="password" placeholder="Password" name="password" id="password"/>
+        </div>
+        <div class="textboxlbl">
+        <span class="lblinput">Confirm Password </span>
+        <input type="password" placeholder="Re-enter password" name="confirmpassword" id="confirmpassword"/>
+        </div>
+        <div class="listforbuttons">
+        <input type="button" value="Home" id="buttonforlogin" class="clickbtn"/>
+        <input type="submit" value="Register" id="registerbutton" class="clickbtn"/>
+        </div>
+        <div id="msg1"></div>
+        </form>
+    </div>
+    </body>
+    <script>
+    let ob=document.getElementById("reg");
+    let name=document.getElementById("username");
+    let key=document.getElementById("password");
+    let key1=document.getElementById("confirmpassword");
+    ob.addEventListener('submit',async (e)=>
+    {   
+        e.preventDefault();
+        const a=await fetch('http://localhost:3000/register',{
+            method:"POST",
+            headers:
+            {
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                userName:name.value,
+                password:key.value,
+                secondpassword:key1.value
+            })
+        }).then(res=>res.json())
+        console.log(a);
+        if(a.test==false)
+        {
+            window.location.replace("http://localhost:3000/login");
+        }
+        else
+        {
+            let rs=document.getElementById("msg1");
+            key.value="";
+            key1.value="";
+            rs.innerText=a.message;
+        }
+    })
+    let k=document.getElementById("buttonforlogin");
+    k.addEventListener('click',()=>
+    {
+        window.location.replace("http://localhost:3000/start");
+    })
+    </script>
+</html>
